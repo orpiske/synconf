@@ -10,6 +10,7 @@ Group:              User Interface/X Hardware Support
 Source:             synconf-%{version}.tar.gz
 URL:                http://github.com/orpiske/synconf
 BuildArch:          noarch
+Requires:           xorg-x11-drv-synaptics
 
 %description
 Synconf contains configuration files for synclient that reconfigure the driver
@@ -30,4 +31,3 @@ make -f %{_builddir}/%{name}-%{version}/Makefile  PREFIX=%{buildroot}/etc/X11/xo
 %changelog
 * Sat Jul 9 2016 Otavio R. Piske <angusyoung@gmail.com> - 0.0.1
 - Initial release
-
