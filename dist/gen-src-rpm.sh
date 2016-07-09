@@ -1,0 +1,1 @@
+mock -r fedora-24-x86_64 --scm-enable --scm-option method=git --scm-option package=synconf --scm-option git_get=set --scm-option spec=dist/synconf.spec --scm-option branch=master --scm-option write_tar=True --scm-option git_get='git clone https://github.com/orpiske/synconf.git synconf'
