@@ -21,10 +21,11 @@ like in OS X.
 
 
 %install
-make -f %{_builddir}/%{name}-%{version}/Makefile install
+mkdir -p %{buildroot}/etc/X11/xorg.conf.d
+make -f %{_builddir}/%{name}-%{version}/Makefile  PREFIX=%{buildroot}/etc/X11/xorg.conf.d install
 
 %files
-%config /etc/X11/xorg.conf.d/%{name}
+%config /etc/X11/xorg.conf.d/*
 
 %changelog
 * Sat Jul 9 2016 Otavio R. Piske <angusyoung@gmail.com> - 0.0.1
