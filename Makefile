@@ -1,4 +1,4 @@
-PREFIX?=/etc/X11/xorg.conf.d/
+PREFIX?=/etc/X11/
 PROJECT_NAME=synconf
 BASEDIR=$(PREFIX)/xorg.conf.d/
 
@@ -28,5 +28,3 @@ rpm-prep: rpm-clean
 
 rpm: rpm-prep
 	rpmbuild -ba dist/$(PROJECT_NAME).spec
-
-

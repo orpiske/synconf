@@ -4,7 +4,7 @@
 Summary:            Synconf - Synclient configuration for Apple notebooks
 Name:               synconf
 Version:            0.0.1
-Release:            1
+Release:            2
 License:            GPLv2+
 Group:              User Interface/X Hardware Support
 Source:             synconf-%{version}.tar.gz
@@ -23,11 +23,14 @@ like in OS X.
 
 %install
 mkdir -p %{buildroot}/etc/X11/xorg.conf.d
-make -f %{_builddir}/%{name}-%{version}/Makefile  PREFIX=%{buildroot}/etc/X11/xorg.conf.d install
+make -f %{_builddir}/%{name}-%{version}/Makefile  PREFIX=%{buildroot}/etc/X11 install
 
 %files
 %config /etc/X11/xorg.conf.d/*
 
 %changelog
+* Sun Jul 10 2016 Otavio R. Piske <angusyoung@gmail.com> - 0.0.1-2
+- Fixed the installation path for the configuration file
+
 * Sat Jul 9 2016 Otavio R. Piske <angusyoung@gmail.com> - 0.0.1
 - Initial release
